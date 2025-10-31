@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "JadeAI",
+    "subtitle": "Your intelligent AI writing assistant is coming soon.",
+    "emailPlaceholder": "Enter your email",
+    "cta": "Join Waitlist",
+    "secondaryCta": "See sample outputs"
+  },
+  "problem": {
+    "title": "Writing takes time. Consistency is hard.",
+    "point1": "Hours lost on drafts and revisions",
+    "point2": "Tone and style consistency is difficult",
+    "point3": "Multilingual content is challenging"
+  },
+  "solution": {
+    "title": "What JadeAI gives you",
+    "feature1": "10 categories and 120+ templates",
+    "feature2": "Style control from 0–100 (chatty to academic)",
+    "feature3": "Share anonymously with the community"
+  },
+  "how": {
+    "title": "How it works",
+    "step1": "Sign in with Google and get 5 free credits",
+    "step2": "Pick a template and set your style",
+    "step3": "Generate, refine, and export"
+  },
+  "samples": {
+    "title": "Sample outputs",
+    "card1": {
+      "title": "Academic summary",
+      "body": "Concise, structured, and properly referenced."
+    },
+    "card2": {
+      "title": "Email in a friendly tone",
+      "body": "Warm, clear, and action-oriented copy."
+    },
+    "card3": {
+      "title": "Product description",
+      "body": "Benefit-driven and SEO-friendly wording."
+    }
+  },
+  "community": {
+    "title": "Anonymous community",
+    "subtitle": "Discover what others create and learn faster.",
+    "cta": "Explore community"
+  },
+  "pricing": {
+    "title": "Simple credits",
+    "free": {
+      "title": "Free",
+      "desc": "Google login → 5 credits"
+    },
+    "paid": {
+      "title": "Premium",
+      "desc": "50 credits → $5"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Do you use your own AI?",
+    "a1": "JadeAI is powered by Gemini for reliable, high-quality responses.",
+    "q2": "Which languages are supported?",
+    "a2": "English at launch. More languages will be added.",
+    "q3": "Is my content private?",
+    "a3": "Your content remains yours. Sharing to community is optional and anonymous."
+  },
+  "footer": {
+    "tag": "Built for creators worldwide",
+    "email": "Email us",
+    "instagram": "Instagram",
+    "model": "Powered by Gemini"
+  }
+}
+
