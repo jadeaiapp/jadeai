@@ -57,12 +57,15 @@
   },
   "faq": {
     "title": "FAQ",
+    "lead": "Answers about JadeAI credits, languages, and privacy.",
     "q1": "Do you use your own AI?",
-    "a1": "JadeAI is powered by Gemini for reliable, high-quality responses.",
+    "a1": "JadeAI is powered by Gemini for reliable, high‑quality responses.",
     "q2": "Which languages are supported?",
-    "a2": "English at launch. More languages will be added.",
-    "q3": "Is my content private?",
-    "a3": "Your content remains yours. Sharing to community is optional and anonymous."
+    "a2": "English, Turkish, German, Spanish, Portuguese and French are supported.",
+    "q3": "How do credits work?",
+    "a3": "One credit = one generated content. Free users get 5 credits with Google login; Premium pack offers 50 credits for $5.",
+    "q4": "Is my content private?",
+    "a4": "Your content is private by default. Sharing to the community is optional and fully anonymous."
   },
   "footer": {
     "tag": "Built for creators worldwide",
