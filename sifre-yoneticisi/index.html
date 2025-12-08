@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Şifre Yöneticisi - Güvenli şifre saklama uygulaması">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Şifre Yöneticisi - Güvenli Şifre Saklama</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../templatemo_570_chain_app_dev/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!--
+TemplateMo 570 Chain App Dev
+https://templatemo.com/tm-570-chain-app-dev
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../templatemo_570_chain_app_dev/assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="../templatemo_570_chain_app_dev/assets/css/animated.css">
+    <link rel="stylesheet" href="../templatemo_570_chain_app_dev/assets/css/owl.css">
+
+    <style>
+      /* Modern Font Overrides */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.02em !important;
+      }
+      
+      /* Hero Section - Dark text on light background */
+      .main-banner h2 {
+        color: #1e293b !important;
+        font-size: 3.5rem !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.5rem !important;
+      }
+      
+      .main-banner p {
+        color: #475569 !important;
+        font-size: 1.2rem !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Section Headings */
+      .section-heading h4 {
+        color: #0f172a !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .section-heading h4 em {
+        color: #0ea5e9 !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+      }
+      
+      .section-heading p {
+        color: #64748b !important;
+        font-size: 1.1rem !important;
+      }
+      
+      /* Service Items */
+      .service-item h4 {
+        color: #0f172a !important;
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .service-item p {
+        color: #475569 !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* About Section */
+      .about-us .section-heading h4 {
+        color: #0f172a !important;
+      }
+      
+      .box-item h4 a {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+        font-size: 1.3rem !important;
+      }
+      
+      .box-item p {
+        color: #64748b !important;
+      }
+      
+      /* Security Section */
+      .the-clients .section-heading h4 {
+        color: #0f172a !important;
+      }
+      
+      .naccs .thumb h4 {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+        font-size: 1.4rem !important;
+      }
+      
+      .client-content h4 {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+        font-size: 1.5rem !important;
+      }
+      
+      
+      /* Footer */
+      .footer-widget h4 {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
+      }
+      
+      /* Header Logo */
+      .logo span {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.01em !important;
+      }
+      
+      /* Navigation Links */
+      .nav a {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+      }
+    </style>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../index.html" class="logo">
+              <span style="font-size: 24px; font-weight: 700; color: #0ea5e9;">🔒 Şifre Yöneticisi</span>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Ana Sayfa</a></li>
+              <li class="scroll-to-section"><a href="#services">Özellikler</a></li>
+              <li class="scroll-to-section"><a href="#about">Hakkında</a></li>
+              <li class="scroll-to-section"><a href="#security">Güvenlik</a></li>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Şifrelerinizi Güvenle Saklayın</h2>
+                    <p>Şifre Yöneticisi, şifrelerinizi AES-256 şifreleme ile güvenle saklayan, biyometrik kimlik doğrulama destekli ve tamamen offline çalışan bir mobil uygulamadır.</p>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="white-button first-button scroll-to-section">
+                      <a href="https://play.google.com/store/apps/details?id=com.jadeai.passwordmanager" target="_blank">Play Store'dan İndir <i class="fab fa-google-play"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div style="text-align: center; padding: 50px;">
+                  <i class="fas fa-shield-alt" style="font-size: 200px; color: #0ea5e9; opacity: 0.8;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Güvenlik <em>Özellikleri</em></h4>
+            <img src="../templatemo_570_chain_app_dev/assets/images/heading-line-dec.png" alt="">
+            <p>Şifre Yöneticisi, endüstri standardı güvenlik özellikleri ile şifrelerinizi korur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>AES-256 Şifreleme</h4>
+            <p>Tüm şifreleriniz AES-256-CBC ile şifrelenmiş olarak cihazınızda saklanır. Şifreleme anahtarı master password'ünüzden türetilir.</p>
+            <div class="text-button">
+              <a href="#security">Daha Fazla <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Biyometrik Giriş</h4>
+            <p>Parmak izi veya yüz tanıma ile hızlı ve güvenli giriş. Biyometrik verileriniz cihazınızda saklanır.</p>
+            <div class="text-button">
+              <a href="#security">Daha Fazla <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Tamamen Offline</h4>
+            <p>Uygulama hiçbir şekilde internete bağlanmaz. Tüm verileriniz yalnızca cihazınızda saklanır ve şifrelenir.</p>
+            <div class="text-button">
+              <a href="#security">Daha Fazla <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item fourth-service">
+            <div class="icon"></div>
+            <h4>Master Password</h4>
+            <p>Ana şifrenizin hash'lenmiş versiyonu cihazın güvenli depolama alanında (Secure Enclave/Android Keystore) saklanır.</p>
+            <div class="text-button">
+              <a href="#security">Daha Fazla <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h4>Şifre Yöneticisi <em>Hakkında</em></h4>
+            <img src="../templatemo_570_chain_app_dev/assets/images/heading-line-dec.png" alt="">
+            <p>Şifre Yöneticisi, kullanıcıların şifrelerini güvenli bir şekilde saklamasına olanak tanıyan bir mobil uygulamadır.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#security">Güvenli Depolama</a></h4>
+                <p>AES-256 şifreleme ile güvenli saklama</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#security">Biyometrik Giriş</a></h4>
+                <p>Parmak izi ve yüz tanıma desteği</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#security">Offline Çalışma</a></h4>
+                <p>İnternet bağlantısı gerektirmez</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#security">Veri Gizliliği</a></h4>
+                <p>Hiçbir veri sunucuya gönderilmez</p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <p>Şifre Yöneticisi, verilerinizi korumak için endüstri standardı güçlü şifreleme yöntemleri kullanır. Tüm şifreleriniz ve hassas verileriniz yalnızca cihazınızda saklanır.</p>
+              <div class="gradient-button">
+                <a href="https://play.google.com/store/apps/details?id=com.jadeai.passwordmanager" target="_blank">Play Store'dan İndir</a>
+              </div>
+              <span>*Tamamen Ücretsiz</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <div style="text-align: center; padding: 50px;">
+              <i class="fas fa-lock" style="font-size: 300px; color: #0ea5e9; opacity: 0.3;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="security" class="the-clients">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Güvenlik <em>Garantisi</em></h4>
+            <img src="../templatemo_570_chain_app_dev/assets/images/heading-line-dec.png" alt="">
+            <p>Şifre Yöneticisi, verilerinizi korumak için en yüksek güvenlik standartlarını kullanır.</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-7 align-self-center">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Veri Paylaşımı Yok</h4>
+                            <span class="date">Gizlilik</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Güvenlik</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Offline Çalışma</h4>
+                            <span class="date">Bağımsızlık</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Güvenlik</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>AES-256 Şifreleme</h4>
+                            <span class="date">Endüstri Standardı</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Güvenlik</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Biyometrik Giriş</h4>
+                            <span class="date">Kolay Erişim</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Güvenlik</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-5">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="../templatemo_570_chain_app_dev/assets/images/quote.png" alt="">
+                                <p>"Uygulama hiçbir veriyi üçüncü taraflarla paylaşmaz. Tüm verileriniz yalnızca cihazınızda saklanır ve şifrelenir. İnternet bağlantısı gerektirmez."</p>
+                              </div>
+                              <div class="down-content">
+                                <div class="right-content">
+                                  <h4>Gizlilik Öncelikli</h4>
+                                  <span>Veri Güvenliği</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="../templatemo_570_chain_app_dev/assets/images/quote.png" alt="">
+                                <p>"Uygulama tamamen offline çalışır. Uçak modunda bile tüm özellikler çalışır. Verileriniz cihazda, her zaman erişilebilir."</p>
+                              </div>
+                              <div class="down-content">
+                                <div class="right-content">
+                                  <h4>Offline Çalışma</h4>
+                                  <span>Bağımsız Kullanım</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="../templatemo_570_chain_app_dev/assets/images/quote.png" alt="">
+                                <p>"Tüm şifreleriniz AES-256-CBC ile şifrelenmiş olarak cihazınızda saklanır. Bu, askeri ve finansal kurumlar tarafından kullanılan en güçlü şifreleme yöntemlerinden biridir."</p>
+                              </div>
+                              <div class="down-content">
+                                <div class="right-content">
+                                  <h4>AES-256 Şifreleme</h4>
+                                  <span>Endüstri Standardı</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="../templatemo_570_chain_app_dev/assets/images/quote.png" alt="">
+                                <p>"Parmak izi veya yüz tanıma ile hızlı ve güvenli giriş. Biyometrik verileriniz cihazınızın güvenli depolama alanında saklanır ve hiçbir zaman sunuculara gönderilmez."</p>
+                              </div>
+                              <div class="down-content">
+                                <div class="right-content">
+                                  <h4>Biyometrik Giriş</h4>
+                                  <span>Kolay ve Güvenli</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Haberlerimizi almak için bültenimize katılın</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+          <form id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <input type="email" name="email" class="email" placeholder="Email Adresiniz..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <button type="submit" class="main-button">Abone Ol <i class="fa fa-angle-right"></i></button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>İletişim</h4>
+            <p><a href="mailto:hello.jadeai@gmail.com">hello.jadeai@gmail.com</a></p>
+            <p><a href="https://instagram.com/jadeai.app" target="_blank">@jadeai.app</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Bağlantılar</h4>
+            <ul>
+              <li><a href="../index.html">Ana Sayfa</a></li>
+              <li><a href="#services">Özellikler</a></li>
+              <li><a href="#about">Hakkında</a></li>
+              <li><a href="#security">Güvenlik</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Yasal</h4>
+            <ul>
+              <li><a href="privacy-policy.html">Gizlilik Politikası</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>JadeAI</h4>
+            <p>Kullanıcı odaklı mobil uygulamalar geliştiriyoruz.</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2025 JadeAI. Tüm hakları saklıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../templatemo_570_chain_app_dev/vendor/jquery/jquery.min.js"></script>
+  <script src="../templatemo_570_chain_app_dev/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../templatemo_570_chain_app_dev/assets/js/owl-carousel.js"></script>
+  <script src="../templatemo_570_chain_app_dev/assets/js/animation.js"></script>
+  <script src="../templatemo_570_chain_app_dev/assets/js/imagesloaded.js"></script>
+  <script src="../templatemo_570_chain_app_dev/assets/js/popup.js"></script>
+  <script src="../templatemo_570_chain_app_dev/assets/js/custom.js"></script>
+  
+  <script>
+    // Newsletter form submission
+    document.getElementById('search').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const email = formData.get('email') || '';
+      const body = 'Email: ' + email + '\n\nBültenimize abone olmak istiyorum.';
+      window.location.href = 'mailto:hello.jadeai@gmail.com?subject=Şifre Yöneticisi Bülten Aboneliği&body=' + encodeURIComponent(body);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

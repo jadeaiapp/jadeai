@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garanti Takipçisi &mdash; Gizlilik Politikası</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fff8f0;
+        --fg: #1a1a1a;
+        --accent: #ff6b35;
+        --muted: #666;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: var(--fg);
+        background: var(--bg);
+      }
+
+      header {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        color: #fff;
+        padding: 56px 24px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0 0 16px;
+        font-size: 2.6rem;
+        letter-spacing: -0.02em;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 1.1rem;
+        opacity: 0.92;
+      }
+
+      main {
+        max-width: 900px;
+        margin: -48px auto 72px;
+        padding: 0 24px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 16px;
+        padding: 48px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        color: var(--accent);
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        color: var(--fg);
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--muted);
+      }
+
+      ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        color: var(--muted);
+      }
+
+      strong {
+        color: var(--fg);
+        font-weight: 600;
+      }
+
+      .last-updated {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          padding: 32px 24px;
+        }
+
+        header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gizlilik Politikası</h1>
+      <p>Garanti Takipçisi</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <p class="last-updated">Son Güncelleme: 7 Aralık 2025</p>
+
+        <h2>1. Genel Bilgiler</h2>
+        <p>
+          Garanti Takipçisi ("Uygulama"), kullanıcıların ürün garantilerini takip etmesine olanak tanıyan bir mobil uygulamadır. 
+          Bu gizlilik politikası, uygulamanın veri toplama, kullanma ve koruma uygulamalarını açıklar.
+        </p>
+        <p>
+          <strong>Önemli:</strong> Uygulama tamamen offline çalışır. Hiçbir veri internete gönderilmez veya uzak sunucularda saklanmaz.
+        </p>
+
+        <h2>2. Toplanan Veriler</h2>
+        <h3>2.1. Yerel Olarak Saklanan Veriler</h3>
+        <p>Uygulama aşağıdaki verileri <strong>yalnızca cihazınızda</strong> saklar:</p>
+        <ul>
+          <li><strong>Ürün Bilgileri:</strong> Ürün adı, marka, seri numarası, kategori bilgileri</li>
+          <li><strong>Tarih Bilgileri:</strong> Satın alma tarihi, garanti bitiş tarihi</li>
+          <li><strong>Fotoğraflar:</strong> Kamera ile çekilen veya galeriden seçilen ürün fotoğrafları, fatura fotoğrafları, seri numarası fotoğrafları</li>
+          <li><strong>Belgeler:</strong> PDF formatında fatura ve garanti belgeleri</li>
+          <li><strong>Notlar:</strong> Ürünle ilgili kullanıcı tarafından eklenen ek bilgiler</li>
+          <li><strong>Hatırlatma Ayarları:</strong> Bildirim tercihleri ve özel hatırlatma zamanları</li>
+          <li><strong>Uygulama Ayarları:</strong> Tema tercihi (açık/koyu mod), dil seçimi</li>
+        </ul>
+        <p>
+          Tüm veriler SQLite veritabanında ve uygulamanın özel dosya dizininde saklanır. 
+          Bu veriler sadece uygulama tarafından erişilebilir ve cihaz dışına çıkmaz.
+        </p>
+
+        <h3>2.2. İzinler ve Kullanım Amaçları</h3>
+        <p>Uygulama aşağıdaki izinleri kullanır:</p>
+        <ul>
+          <li>
+            <strong>Kamera (CAMERA):</strong> Ürün fotoğrafları, fatura ve garanti belgelerinin fotoğraflarını çekmek için kullanılır. 
+            Çekilen fotoğraflar sadece cihazınızda saklanır ve hiçbir yere gönderilmez. Bu izin isteğe bağlıdır.
+          </li>
+          <li>
+            <strong>Galeri Erişimi (READ_MEDIA_IMAGES):</strong> Cihazınızdaki mevcut fotoğrafları seçmek için kullanılır. 
+            Seçilen fotoğraflar uygulamanın özel dizinine kopyalanır. Bu izin isteğe bağlıdır.
+          </li>
+          <li>
+            <strong>Bildirimler (POST_NOTIFICATIONS):</strong> Garanti bitiş tarihlerine yaklaşıldığında size hatırlatma bildirimleri göndermek için kullanılır. 
+            Bu izin isteğe bağlıdır.
+          </li>
+          <li>
+            <strong>Tam Zamanlı Bildirimler (SCHEDULE_EXACT_ALARM, USE_EXACT_ALARM):</strong> Hatırlatma bildirimlerinin tam olarak belirlediğiniz saatte gösterilmesi için kullanılır. 
+            Bu izin isteğe bağlıdır ve sadece Android 12 ve üzeri sürümlerde gereklidir.
+          </li>
+          <li>
+            <strong>Cihaz Yeniden Başlatma (RECEIVE_BOOT_COMPLETED):</strong> Cihazınız yeniden başladığında zamanlanmış bildirimlerin korunması için kullanılır. 
+            Bu izin otomatik olarak verilir.
+          </li>
+          <li>
+            <strong>Uyku Modunda Çalışma (WAKE_LOCK):</strong> Cihazınız uyku modundayken bildirimlerin gösterilmesi için kullanılır. 
+            Bu izin otomatik olarak verilir.
+          </li>
+          <li>
+            <strong>İnternet (INTERNET):</strong> Bu izin sadece geliştirme aşamasında kullanılır. 
+            Yayınlanan uygulamada internet bağlantısı kullanılmaz ve hiçbir veri gönderilmez.
+          </li>
+        </ul>
+        <p>
+          <strong>Önemli Not:</strong> Kamera, galeri ve bildirim izinleri isteğe bağlıdır. 
+          Bu izinleri vermezseniz, uygulamanın temel işlevselliği (manuel veri girişi ve görüntüleme) çalışmaya devam eder.
+        </p>
+
+        <h2>3. Veri Paylaşımı ve İnternet Kullanımı</h2>
+        <p>
+          <strong>Uygulama hiçbir veriyi üçüncü taraflarla paylaşmaz ve internet bağlantısı kullanmaz.</strong>
+        </p>
+        <p>
+          Tüm verileriniz yalnızca cihazınızda saklanır ve cihaz dışına çıkmaz:
+        </p>
+        <ul>
+          <li><strong>İnternet Bağlantısı Yok:</strong> Uygulama üretim sürümünde hiçbir şekilde internete bağlanmaz</li>
+          <li><strong>Sunucu Yok:</strong> Verilerinizi saklayacak veya işleyecek uzak bir sunucu bulunmamaktadır</li>
+          <li><strong>Analitik Yok:</strong> Kullanım istatistikleri veya davranış analizi toplanmaz</li>
+          <li><strong>Reklam Yok:</strong> Reklam servisleri veya takip kodları kullanılmaz</li>
+          <li><strong>Üçüncü Taraf Entegrasyonu Yok:</strong> Sosyal medya, bulut depolama veya diğer dış servislere bağlantı yoktur</li>
+          <li><strong>Hesap Sistemi Yok:</strong> Kullanıcı kaydı, giriş veya kimlik doğrulama gerektirmez</li>
+          <li><strong>Veri Senkronizasyonu Yok:</strong> Verileriniz başka cihazlarla senkronize edilmez</li>
+        </ul>
+        <p>
+          <strong>Kamera ile Çekilen Fotoğraflar:</strong> Kamera izni ile çekilen tüm fotoğraflar doğrudan uygulamanın 
+          özel dosya dizinine (<code>/data/data/com.garantitakipcisi/files/</code>) kaydedilir. 
+          Bu fotoğraflar hiçbir şekilde internete yüklenmez, üçüncü taraflarla paylaşılmaz veya cihaz dışına çıkarılmaz.
+        </p>
+
+        <h2>4. Veri Güvenliği ve Depolama</h2>
+        <p>
+          Uygulama, verilerinizi korumak için aşağıdaki güvenlik önlemlerini kullanır:
+        </p>
+        <ul>
+          <li>
+            <strong>Yerel SQLite Veritabanı:</strong> Ürün bilgileri, tarihler, notlar ve hatırlatma ayarları 
+            SQLite veritabanında cihazınızda saklanır. Bu veritabanı uygulamanın özel alanında bulunur ve 
+            sadece uygulama tarafından erişilebilir.
+          </li>
+          <li>
+            <strong>Özel Dosya Dizini:</strong> Fotoğraflar ve PDF belgeleri uygulamanın özel dosya dizininde 
+            (<code>/data/data/com.garantitakipcisi/files/</code>) saklanır. Bu dizine diğer uygulamalar erişemez.
+          </li>
+          <li>
+            <strong>Android Sandbox:</strong> Android işletim sisteminin güvenlik modeli sayesinde, 
+            uygulamanın verileri diğer uygulamalardan izole edilmiştir.
+          </li>
+          <li>
+            <strong>Cihaz Şifreleme:</strong> Modern Android cihazlarda varsayılan olarak aktif olan 
+            cihaz şifreleme özelliği, tüm uygulama verilerinizi korur.
+          </li>
+          <li>
+            <strong>İzin Yönetimi:</strong> Uygulama sadece gerekli izinleri ister ve kullanıcı iznini 
+            gerektiren tüm işlemler (kamera, galeri, bildirimler) için açıkça onay alır.
+          </li>
+          <li>
+            <strong>Yedekleme Devre Dışı:</strong> Uygulama verileri Android'in otomatik yedekleme sistemine dahil edilmemiştir 
+            (<code>android:allowBackup="false"</code>), böylece verileriniz istemeden buluta yüklenmez.
+          </li>
+        </ul>
+        <p>
+          <strong>Veri Saklama Konumu:</strong> Tüm veriler cihazınızın dahili depolamasında, 
+          uygulamanın özel alanında saklanır. SD kart veya harici depolama kullanılmaz.
+        </p>
+
+        <h2>5. Veri Silme ve Kullanıcı Hakları</h2>
+        <p>
+          Verileriniz üzerinde tam kontrole sahipsiniz:
+        </p>
+        <ul>
+          <li>
+            <strong>Ürün Silme:</strong> Bir ürünü sildiğinizde, o ürüne ait tüm veriler (fotoğraflar, belgeler, notlar, hatırlatmalar) 
+            otomatik olarak ve kalıcı olarak cihazınızdan silinir.
+          </li>
+          <li>
+            <strong>Fotoğraf Silme:</strong> Ürün düzenleme ekranından istediğiniz fotoğrafları tek tek silebilirsiniz. 
+            Silinen fotoğraflar dosya sisteminden de kalıcı olarak kaldırılır.
+          </li>
+          <li>
+            <strong>Belge Silme:</strong> PDF belgelerini istediğiniz zaman silebilirsiniz. 
+            Silinen belgeler dosya sisteminden de kalıcı olarak kaldırılır.
+          </li>
+          <li>
+            <strong>Uygulama Kaldırma:</strong> Uygulamayı cihazınızdan kaldırdığınızda, tüm veriler 
+            (veritabanı, fotoğraflar, belgeler, ayarlar) otomatik olarak ve kalıcı olarak silinir. 
+            Hiçbir veri cihazınızda veya başka bir yerde kalmaz.
+          </li>
+          <li>
+            <strong>İzin İptali:</strong> Android ayarlarından istediğiniz zaman kamera, galeri veya bildirim izinlerini iptal edebilirsiniz. 
+            İzinler iptal edildiğinde, ilgili özellikler devre dışı kalır ancak mevcut verileriniz korunur.
+          </li>
+        </ul>
+        <p>
+          <strong>Veri Kurtarma:</strong> Uygulama bulut yedekleme kullanmadığı için, silinen veriler kurtarılamaz. 
+          Önemli verileri silmeden önce manuel olarak yedeklemeniz önerilir (örneğin fotoğrafları galeriye kaydetme).
+        </p>
+
+        <h2>6. Çocukların Gizliliği</h2>
+        <p>
+          Uygulama herhangi bir yaş sınırlaması olmaksızın kullanılabilir. Uygulama hiçbir kişisel veri toplamadığı, 
+          internet bağlantısı kullanmadığı ve tüm verileri sadece cihazda sakladığı için, çocukların gizliliği için 
+          özel bir risk oluşturmaz.
+        </p>
+        <p>
+          Ancak, ebeveynlerin çocuklarının uygulama kullanımını denetlemesi ve özellikle kamera izninin 
+          uygun şekilde kullanılmasını sağlaması önerilir.
+        </p>
+
+        <h2>7. Üçüncü Taraf Kütüphaneler</h2>
+        <p>
+          Uygulama aşağıdaki açık kaynak kütüphaneleri kullanır:
+        </p>
+        <ul>
+          <li><strong>React Native:</strong> Mobil uygulama geliştirme framework'ü</li>
+          <li><strong>React Native SQLite Storage:</strong> Yerel veritabanı yönetimi</li>
+          <li><strong>React Native Image Picker:</strong> Kamera ve galeri erişimi</li>
+          <li><strong>React Native FS:</strong> Dosya sistemi yönetimi</li>
+          <li><strong>Notifee:</strong> Bildirim yönetimi</li>
+        </ul>
+        <p>
+          Bu kütüphanelerin hiçbiri veri toplama veya internet iletişimi gerçekleştirmez. 
+          Tüm işlemler cihazda yerel olarak yapılır.
+        </p>
+
+        <h2>8. Yasal Uyumluluk</h2>
+        <p>
+          Bu gizlilik politikası aşağıdaki düzenlemelere uygun olarak hazırlanmıştır:
+        </p>
+        <ul>
+          <li><strong>KVKK (Kişisel Verilerin Korunması Kanunu):</strong> Türkiye veri koruma mevzuatı</li>
+          <li><strong>GDPR (General Data Protection Regulation):</strong> Avrupa Birliği veri koruma düzenlemesi</li>
+          <li><strong>Google Play Store Politikaları:</strong> Uygulama mağazası gereksinimleri</li>
+        </ul>
+        <p>
+          Uygulama hiçbir kişisel veri toplamadığı ve internet kullanmadığı için, 
+          bu düzenlemelerin çoğu gereksinimi doğal olarak karşılanmaktadır.
+        </p>
+
+        <h2>9. Gizlilik Politikası Değişiklikleri</h2>
+        <p>
+          Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler durumunda, 
+          uygulama güncellemesi ile birlikte kullanıcılar bilgilendirilecektir. 
+          Değişiklikler bu sayfada yayınlandığı andan itibaren geçerlidir.
+        </p>
+        <p>
+          Son güncelleme tarihi sayfanın en üstünde belirtilmiştir.
+        </p>
+
+        <h2>10. İletişim</h2>
+        <p>
+          Gizlilik politikası, veri güvenliği veya uygulama hakkında sorularınız için bizimle iletişime geçebilirsiniz:
+        </p>
+        <p>
+          <strong>E-posta:</strong> hello.jadeai@gmail.com<br>
+          <strong>Geliştirici:</strong> JadeAI<br>
+          <strong>Uygulama Adı:</strong> Garanti Takipçisi<br>
+          <strong>Paket Adı:</strong> com.garantitakipcisi
+        </p>
+        <p>
+          Sorularınız 48 saat içinde yanıtlanacaktır.
+        </p>
+
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+      </div>
+    </main>
+  </body>
+</html>
+

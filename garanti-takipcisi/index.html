@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Garanti Takipçisi - Ürün Garantilerinizi Takip Edin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../templatemo_582_tale_seo_agency/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../templatemo_582_tale_seo_agency/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../templatemo_582_tale_seo_agency/assets/css/templatemo-tale-seo-agency.css">
+    <link rel="stylesheet" href="../templatemo_582_tale_seo_agency/assets/css/owl.css">
+    <link rel="stylesheet" href="../templatemo_582_tale_seo_agency/assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <style>
+      /* Modern Font Overrides */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.02em !important;
+      }
+      
+      /* Hero Section */
+      .main-banner h4 {
+        color: #1e293b !important;
+        font-size: 3rem !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+      }
+      
+      .main-banner h4 em {
+        color: #ff6b35 !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+      }
+      
+      .main-banner h4 span {
+        color: #f7931e !important;
+        font-weight: 600 !important;
+      }
+      
+      .main-banner h6 {
+        color: #ff6b35 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.1em !important;
+      }
+      
+      .main-banner p {
+        color: #475569 !important;
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Section Headings */
+      .section-heading h2 {
+        color: #0f172a !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .section-heading h2 em {
+        color: #ff6b35 !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+      }
+      
+      .section-heading h2 span {
+        color: #f7931e !important;
+        font-weight: 600 !important;
+      }
+      
+      .section-heading p {
+        color: #64748b !important;
+        font-size: 1.1rem !important;
+      }
+      
+      /* Service Items */
+      .service-item {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .service-item h4 {
+        color: #0f172a !important;
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .service-item p {
+        color: #475569 !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Projects/How It Works Section */
+      .projects .section-heading h2 {
+        color: #0f172a !important;
+      }
+      
+      /* Info Section */
+      .infos .section-heading h2 {
+        color: #0f172a !important;
+      }
+      
+      .infos p {
+        color: #475569 !important;
+        line-height: 1.7 !important;
+      }
+      
+      /* Skills/Progress Bars - Fix width and colors */
+      .infos .main-content .skill-slide {
+        background-color: #fff4ed !important;
+      }
+      
+      .infos .main-content .skill-slide .fill {
+        background-color: #ff6b35 !important;
+        height: 10px !important;
+        border-radius: 5px !important;
+      }
+      
+      .infos .main-content .marketing .fill {
+        width: 100% !important;
+      }
+      
+      .infos .main-content .digital .fill {
+        width: 100% !important;
+      }
+      
+      .infos .main-content .media .fill {
+        width: 95% !important;
+      }
+      
+      .infos .main-content .skill-slide h6 {
+        color: #ff6b35 !important;
+        font-weight: 700 !important;
+      }
+      
+      .infos .main-content .skill-slide span {
+        color: #ff6b35 !important;
+        font-weight: 700 !important;
+      }
+      
+      .infos .main-content .marketing span {
+        right: 0% !important;
+      }
+      
+      .infos .main-content .digital span {
+        right: 0% !important;
+      }
+      
+      .infos .main-content .media span {
+        right: 5% !important;
+      }
+      
+      /* Contact Section - Use original theme styles */
+      .contact-us .contact-us-content {
+        background-color: #fff !important;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10) !important;
+      }
+      
+      #contact-form {
+        padding: 60px !important;
+        border-radius: 23px 23px 0px 0px !important;
+        border: 1px solid #f3d7ff !important;
+        background-color: transparent !important;
+      }
+      
+      #contact-form input,
+      #contact-form textarea {
+        width: 100% !important;
+        height: 46px !important;
+        border-radius: 23px !important;
+        background-color: #f9ebff !important;
+        border: none !important;
+        outline: none !important;
+        padding: 0px 15px !important;
+        font-size: 14px !important;
+        color: #2a2a2a !important;
+        font-weight: 600 !important;
+        margin-bottom: 15px !important;
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      #contact-form textarea {
+        height: 120px !important;
+        padding: 15px !important;
+      }
+      
+      #contact-form input::placeholder,
+      #contact-form textarea::placeholder {
+        color: #2a2a2a !important;
+      }
+      
+      #contact-form button,
+      #form-submit {
+        border: none !important;
+        height: 46px !important;
+        background-color: #ff6b35 !important;
+        width: 100% !important;
+        border-radius: 23px !important;
+        color: #fff !important;
+        font-weight: 600 !important;
+        transition: all 0.4s !important;
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      #contact-form button:hover,
+      #form-submit:hover {
+        background-color: #f7931e !important;
+        opacity: 0.9 !important;
+      }
+      
+      /* Footer */
+      .footer-widget h4 {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
+      }
+
+      /* Header offset fix after removing pre-header */
+      .header-area {
+        top: 0 !important;
+      }
+      
+      /* Logo */
+      .logo span {
+        font-family: 'Poppins', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.01em !important;
+      }
+      
+      /* Navigation */
+      .nav a {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 500 !important;
+      }
+      
+      /* Owl Carousel Fix - No Loop, Show Only 3 Items */
+      .owl-features {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .owl-features .item {
+        padding: 0 15px;
+      }
+      
+      .owl-features .owl-stage {
+        display: flex;
+        align-items: stretch;
+      }
+      
+      .owl-features .owl-item {
+        display: flex;
+        height: 100%;
+      }
+
+      /* Header logo alignment */
+      .header-area .main-nav {
+        align-items: center !important;
+      }
+
+      .header-area .main-nav .logo {
+        margin-top: 0 !important;
+      }
+
+      .background-header .main-nav .logo {
+        margin-top: 0 !important;
+      }
+    </style>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="../index.html" class="logo">
+                        <span style="font-size: 24px; font-weight: 700; color: #ff6b35;">📅 Garanti Takipçisi</span>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Ana Sayfa</a></li>
+                      <li class="scroll-to-section"><a href="#services">Özellikler</a></li>
+                      <li class="scroll-to-section"><a href="#projects">Nasıl Çalışır</a></li>
+                      <li class="scroll-to-section"><a href="#infos">Hakkında</a></li>
+                      <li class="scroll-to-section"><a href="#contact">İletişim</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="caption header-text">
+            <h6>GARANTİ TAKİP UYGULAMASI</h6>
+            <div class="line-dec"></div>
+            <h4>Ürün <em>Garantilerinizi</em> Takip Edin <span>Hiçbir Garantiyi Kaçırmayın</span></h4>
+            <p>Garanti Takipçisi, ev eşyalarınızın garanti sürelerini takip etmenizi ve garanti haklarını kaybetmemek için zamanında hatırlatma almanızı sağlar. Tamamen offline çalışır, gizlilik odaklıdır.</p>
+            <div class="main-button scroll-to-section"><a href="https://play.google.com/store/apps/details?id=com.jadeai.warrantytracker" target="_blank">Play Store'dan İndir</a></div>
+            <span>veya</span>
+            <div class="second-button"><a href="#services">Özellikleri Keşfet</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h2>Güçlü <em>Özellikler</em> &amp;
+                  <span>Avantajlar</span> Sizi Bekliyor</h2>
+                  <div class="line-dec"></div>
+                  <p>Garanti Takipçisi ile tüm ürün garantilerinizi tek bir yerden yönetin.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fas fa-lock" style="font-size: 60px; color: #ff6b35;"></i>
+                </div>
+                <h4>Tam Offline Çalışma</h4>
+                <p>İnternet bağlantısı gerektirmez. Uçak modunda bile çalışır.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fas fa-bell" style="font-size: 60px; color: #f7931e;"></i>
+                </div>
+                <h4>Akıllı Hatırlatma Sistemi</h4>
+                <p>5 farklı hatırlatma seçeneği ile hiçbir garantiyi kaçırmayın.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fas fa-camera" style="font-size: 60px; color: #ffd23f;"></i>
+                </div>
+                <h4>Fotoğraf & Belge Yönetimi</h4>
+                <p>Fatura, seri numarası ve garanti belgelerini saklayın.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fas fa-search" style="font-size: 60px; color: #ff6b35;"></i>
+                </div>
+                <h4>Hızlı Arama & Filtreleme</h4>
+                <p>Ürün adı, marka veya kategoriye göre anlık arama.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects section" id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>Nasıl <em>Çalışır?</em> <span>3 Basit Adım</span></h2>
+            <div class="line-dec"></div>
+            <p>Garanti Takipçisi ile garantilerinizi yönetmek çok kolay.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel">
+            <div class="item">
+              <div style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); padding: 40px; text-align: center; color: white; border-radius: 20px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 80px; margin-bottom: 20px;">1</div>
+                <h4 style="color: white; margin-bottom: 15px;">Ürün Ekleyin</h4>
+                <p style="color: rgba(255,255,255,0.9);">Yeni bir ürün satın aldığınızda, garanti bilgilerini uygulamaya ekleyin. Ürün adı, marka, kategori, satın alma tarihi ve garanti süresini girin.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div style="background: linear-gradient(135deg, #f7931e 0%, #ffd23f 100%); padding: 40px; text-align: center; color: white; border-radius: 20px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 80px; margin-bottom: 20px;">2</div>
+                <h4 style="color: white; margin-bottom: 15px;">Belgeleri Ekleyin</h4>
+                <p style="color: rgba(255,255,255,0.9);">Fatura, seri numarası ve garanti belgesi fotoğraflarını ekleyin. PDF belgeleri de saklayabilirsiniz. Hatırlatma ayarlarını yapın.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div style="background: linear-gradient(135deg, #ffd23f 0%, #ff6b35 100%); padding: 40px; text-align: center; color: white; border-radius: 20px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 80px; margin-bottom: 20px;">3</div>
+                <h4 style="color: white; margin-bottom: 15px;">Hatırlatma Alın</h4>
+                <p style="color: rgba(255,255,255,0.9);">Garanti süresi dolmadan önce otomatik bildirim alın. Cihaz kapalı olsa bile hatırlatmalar çalışır. Hiçbir garantiyi kaçırmayın!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="infos section" id="infos">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="main-content">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="left-image">
+                  <img src="../templatemo_582_tale_seo_agency/assets/images/left-infos.jpg" alt="Garanti Takipçisi Hakkında">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="section-heading">
+                  <h2>Garanti Takipçisi <em>Hakkında</em> <span>Daha Fazla Bilgi</span></h2>
+                  <div class="line-dec"></div>
+                  <p>Garanti Takipçisi, modern yaşamın en önemli sorunlarından birini çözen, kullanıcı dostu bir mobil uygulamadır: Ev eşyalarının garanti sürelerini takip etme ve garanti haklarını kaybetmemek için zamanında hatırlatma alma.</p>
+                </div>
+                <div class="skills">
+                  <div class="skill-slide marketing">
+                    <div class="fill" style="width: 100%;"></div>
+                    <h6>Offline Çalışma</h6>
+                    <span>100%</span>
+                  </div>
+                  <div class="skill-slide digital">
+                    <div class="fill" style="width: 100%;"></div>
+                    <h6>Gizlilik</h6>
+                    <span>100%</span>
+                  </div>
+                  <div class="skill-slide media">
+                    <div class="fill" style="width: 95%;"></div>
+                    <h6>Kullanıcı Memnuniyeti</h6>
+                    <span>95%</span>
+                  </div>
+                </div>
+                <p class="more-info">Uygulama tamamen offline çalışır, hiçbir veri sunucuya gönderilmez. Tüm verileriniz cihazınızda SQLite veritabanında saklanır. Hesap kaydı gerektirmez, gizlilik önceliklidir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-us-content">
+            <div class="row">
+              <div class="col-lg-4">
+                <div id="map" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); border-radius: 23px; padding: 40px; color: white; text-align: center; height: 670px; display: flex; flex-direction: column; justify-content: center;">
+                  <i class="fas fa-envelope" style="font-size: 80px; margin-bottom: 30px;"></i>
+                  <h3 style="color: white; margin-bottom: 20px;">İletişim</h3>
+                  <p style="color: rgba(255,255,255,0.9); margin-bottom: 15px;"><strong>Email:</strong><br>hello.jadeai@gmail.com</p>
+                  <p style="color: rgba(255,255,255,0.9);"><strong>Instagram:</strong><br>@jadeai.app</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <form id="contact-form" action="" method="post">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="text" name="name" id="name" placeholder="Adınız..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="text" name="surname" id="surname" placeholder="Soyadınız..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Adresiniz..." required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="text" name="subject" id="subject" placeholder="Konu..." autocomplete="on">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea name="message" id="message" placeholder="Mesajınız..." required></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="orange-button">Mesaj Gönder</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2025 <a href="../index.html">JadeAI</a>. Tüm hakları saklıdır. 
+          <br><a href="privacy-policy.html" style="text-decoration: underline;">Gizlilik Politikası</a> | Design: <a href="https://templatemo.com/" target="_blank" title="css templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../templatemo_582_tale_seo_agency/vendor/jquery/jquery.min.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/assets/js/isotope.min.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/assets/js/owl-carousel.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/assets/js/tabs.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/assets/js/popup.js"></script>
+  <script src="../templatemo_582_tale_seo_agency/assets/js/custom.js"></script>
+  
+  <script>
+    // Override Owl Carousel settings AFTER custom.js loads
+    $(window).on('load', function() {
+      // Wait a bit for custom.js to initialize, then override
+      setTimeout(function() {
+        if ($('.owl-features').length && $('.owl-features').data('owl.carousel')) {
+          // Destroy existing carousel
+          $('.owl-features').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+          $('.owl-features').find('.owl-stage-outer').children().unwrap();
+        }
+        
+        // Reinitialize with correct settings - NO LOOP, only 3 items, NO DOTS
+        $('.owl-features').owlCarousel({
+          items: 3,
+          loop: false, // NO LOOP - this fixes the duplicate issue
+          margin: 30,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 4000,
+          autoplayHoverPause: true,
+          center: false,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+              dots: false
+            },
+            768: {
+              items: 2,
+              nav: false,
+              dots: false
+            },
+            1024: {
+              items: 3,
+              nav: true,
+              dots: false
+            }
+          }
+        });
+      }, 500);
+    });
+    
+    // Contact form submission
+    $(document).ready(function() {
+      var contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+          const body = 'Ad: ' + (data.name || '') + ' ' + (data.surname || '') + '\nEmail: ' + (data.email || '') + '\nKonu: ' + (data.subject || '') + '\n\n' + (data.message || '');
+          window.location.href = 'mailto:hello.jadeai@gmail.com?subject=' + encodeURIComponent(data.subject || 'Garanti Takipçisi İletişim') + '&body=' + encodeURIComponent(body);
+          this.reset();
+        });
+      }
+      
+      // Equalize service item heights
+      var maxServiceHeight = 0;
+      $('.service-item').each(function() {
+        var h = $(this).outerHeight();
+        if (h > maxServiceHeight) {
+          maxServiceHeight = h;
+        }
+      });
+      if (maxServiceHeight > 0) {
+        $('.service-item').css('min-height', maxServiceHeight + 'px');
+      }
+
+      // Add fade-in animation to service items
+      $('.service-item').each(function(index) {
+        var $item = $(this);
+        $item.css({
+          'opacity': '0',
+          'transform': 'translateY(30px)',
+          'transition': 'all 0.6s ease'
+        });
+        setTimeout(function() {
+          $item.css({
+            'opacity': '1',
+            'transform': 'translateY(0)'
+          });
+        }, index * 150);
+      });
+      
+      // Intersection Observer for scroll animations
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        
+        // Observe service items
+        $('.service-item').each(function() {
+          observer.observe(this);
+        });
+        
+        // Observe section headings
+        $('.section-heading').each(function() {
+          $(this).css({
+            'opacity': '0',
+            'transform': 'translateY(20px)',
+            'transition': 'all 0.6s ease'
+          });
+          observer.observe(this);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

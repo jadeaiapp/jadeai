@@ -1,0 +1,12 @@
+# Template folders - not needed in repo
+templatemo_570_chain_app_dev/
+templatemo_582_tale_seo_agency/
+templatemo_600_prism_flux/
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+

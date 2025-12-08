@@ -1,314 +1,1074 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JadeAI - Coming Soon</title>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Theme Vendor CSS (temporarily referenced from Bootslander) -->
-  <link href="Bootslander/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="Bootslander/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="Bootslander/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="Bootslander/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="Bootslander/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Theme Main CSS -->
-  <link href="Bootslander/assets/css/main.css" rel="stylesheet">
-
-  <!-- Our overrides -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JadeAI - Mobil Uygulama Geliştirici</title>
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #ec4899;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #000000;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border-color: #2a2a2a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--darker-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: rgba(10, 10, 10, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+        
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: transparent;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 50px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+            color: white;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+        
+        /* Project Cards */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-link:hover {
+            gap: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Services Grid */
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .service-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Stats */
+        .stats-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-control,
+        .form-select {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .form-control:focus,
+        .form-select:focus {
+            background: var(--card-bg);
+            border-color: var(--primary-color);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+        }
+        
+        .form-label {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="#hero" class="logo d-flex align-items-center">
-        <h1 class="sitename" data-i18n="hero.title" data-default="JadeAI"></h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active" data-i18n="nav.home" data-default="Home"></a></li>
-          <li><a href="#about" data-i18n="nav.about" data-default="About"></a></li>
-          <li><a href="#details" data-i18n="nav.how" data-default="How it works"></a></li>
-          <li><a href="#pricing" data-i18n="nav.pricing" data-default="Pricing"></a></li>
-          <li><a href="#faq" data-i18n="nav.faq" data-default="FAQ"></a></li>
-          <li><a href="#hero" class="button small" data-i18n="hero.cta" data-default="Join Waitlist"></a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
 
-  <main class="main">
-    <section id="hero" class="hero section dark-background">
-      <img src="Bootslander/assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
-      <div class="container">
-        <div class="row gy-4 justify-content-between">
-          <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="bg6.png" class="img-fluid animated" alt="">   
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
-            <h1><span data-i18n="hero.title" data-default="JadeAI"></span></h1>
-            <p data-i18n="hero.subtitle" data-default="Your intelligent AI writing assistant is coming soon."></p>
-            <div class="d-flex">
-              <form id="waitlistForm" class="waitlist">
-                <input type="email" id="email" name="email" placeholder="" aria-label="Email" data-i18n-placeholder="hero.emailPlaceholder" data-default-placeholder="Enter your email" required>
-                <button type="submit" class="button primary" data-i18n="hero.cta" data-default="Join Waitlist"></button>
-              </form>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-i18n="nav.brand">JadeAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-i18n="nav.home">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projelerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="nav.about">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-i18n="nav.services">Hizmetlerimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">İletişim</a>
+                    </li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
             </div>
-            <!-- <a href="#samples" class="link" data-i18n="hero.secondaryCta" data-default="See sample outputs"></a> -->
-          </div>
         </div>
-      </div>
-      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-        <defs>
-          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-        </defs>
-        <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3"></use>
-        </g>
-        <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0"></use>
-        </g>
-        <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9"></use>
-        </g>
-      </svg>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title" data-i18n="hero.title">Geleceği Kodluyoruz</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Modern mobil uygulamalar geliştiren yenilikçi bir teknoloji şirketi</p>
+                <a href="#projects" class="hero-cta" data-i18n="hero.cta">Projelerimizi Keşfet</a>
+            </div>
+        </div>
     </section>
 
-    
+    <!-- Projects Section -->
+    <section id="projects" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="projects.title">Projelerimiz</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="projects.subtitle">Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-icon">✍️</div>
+                        <h3 class="project-title" data-i18n="projects.jadeai.title">JadeAI Yazı Asistanı</h3>
+                        <p class="project-description" data-i18n="projects.jadeai.description">AI destekli yazı asistanı. 120+ template ile hızlı, tutarlı içerik üretin.</p>
+                        <a href="jadeai/index.html" class="project-link">
+                            Keşfet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-icon">🔒</div>
+                        <h3 class="project-title" data-i18n="projects.password.title">Şifre Yöneticisi</h3>
+                        <p class="project-description" data-i18n="projects.password.description">AES-256 şifreleme ile şifrelerinizi güvenle saklayın. Tamamen offline.</p>
+                        <a href="sifre-yoneticisi/index.html" class="project-link">
+                            Keşfet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-icon">📅</div>
+                        <h3 class="project-title" data-i18n="projects.warranty.title">Garanti Takipçisi</h3>
+                        <p class="project-description" data-i18n="projects.warranty.description">Ürün garantilerinizi takip edin. Hatırlatmalar ve bildirimler.</p>
+                        <a href="garanti-takipcisi/index.html" class="project-link">
+                            Keşfet <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-xl-center gy-5">
-          <div class="col-xl-5 content">
-            <h3 data-i18n="about.title" data-default="About JadeAI"></h3>
-            <h2 data-i18n="about.heading" data-default="An AI writing assistant for fast, consistent content"></h2>
-            <p data-i18n="about.body" data-default="JadeAI helps you write in multiple styles and languages. Choose from 10 categories and 120+ templates, set your tone between 0–100, and generate high‑quality drafts in seconds. Powered by Gemini."></p>
-          </div>
-          <div class="col-xl-7">
-            <div class="row gy-4 icon-boxes">
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box">
-                  <i class="bi bi-ui-checks"></i>
-                  <h3 data-i18n="about.point1.title" data-default="120+ templates"></h3>
-                  <p data-i18n="about.point1.body" data-default="Blog, email, academic, product copy and more."></p>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="about.title">Hakkımızda</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="about.subtitle">Teknoloji ve yenilikle geleceği şekillendiriyoruz</p>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-center" style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;" data-i18n="about.description">
+                        JadeAI olarak, kullanıcı deneyimini ön planda tutan, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz. 
+                        Her projemizde, teknolojinin gücünü günlük hayatı kolaylaştırmak için kullanıyoruz.
+                    </p>
                 </div>
-              </div>
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-sliders"></i>
-                  <h3 data-i18n="about.point2.title" data-default="Style control 0–100"></h3>
-                  <p data-i18n="about.point2.body" data-default="From chatty to academic with a single slider."></p>
-                </div>
-              </div>
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box">
-                  <i class="bi bi-translate"></i>
-                  <h3 data-i18n="about.point3.title" data-default="Multilingual"></h3>
-                  <p data-i18n="about.point3.body" data-default="English, Turkish, German, Spanish, Portuguese and French supported."></p>
-                </div>
-              </div>
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-people"></i>
-                  <h3 data-i18n="about.point4.title" data-default="Anonymous community"></h3>
-                  <p data-i18n="about.point4.body" data-default="Share and discover content anonymously."></p>
-                </div>
-              </div>
             </div>
-          </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">💡</div>
+                        <h3 class="service-title" data-i18n="about.values.innovation.title">İnovasyon</h3>
+                        <p class="service-description" data-i18n="about.values.innovation.description">Sürekli gelişim ve yenilikçi çözümler</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">🔐</div>
+                        <h3 class="service-title" data-i18n="about.values.security.title">Güvenlik</h3>
+                        <p class="service-description" data-i18n="about.values.security.description">Kullanıcı verilerinin korunması önceliğimiz</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">⭐</div>
+                        <h3 class="service-title" data-i18n="about.values.quality.title">Kalite</h3>
+                        <p class="service-description" data-i18n="about.values.quality.description">Her detayda mükemmellik arayışı</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Details Section (filled for JadeAI) -->
-    <section id="details" class="details section">
-      <div class="container">
-        <!-- Details Item 1 -->
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/details-1.png" class="img-fluid" alt="" onerror="this.onerror=null;this.src='Bootslander/assets/img/details-1.png';">
-          </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3 data-i18n="details.item1.title" data-default="Write faster with templates"></h3>
-            <p class="fst-italic" data-i18n="details.item1.lead" data-default="120+ templates for emails, blogs, academic text and more."></p>
-            <ul>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item1.point1" data-default="Pick a template and fill minimal inputs."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item1.point2" data-default="Save your favorites for one‑click reuse."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item1.point3" data-default="Consistent structure across teams."></span></li>
-            </ul>
-          </div>
+    <!-- Services Section -->
+    <section id="services" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="services.title">Neler Yapıyoruz</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="services.subtitle">Kapsamlı mobil uygulama geliştirme hizmetleri</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="service-title" data-i18n="services.mobile.title">Mobil Uygulama Geliştirme</h3>
+                        <p class="service-description" data-i18n="services.mobile.description">React Native ile iOS ve Android için native performanslı uygulamalar</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="service-title" data-i18n="services.ai.title">AI Entegrasyonu</h3>
+                        <p class="service-description" data-i18n="services.ai.description">Yapay zeka destekli akıllı özellikler ve otomasyon</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="service-title" data-i18n="services.security.title">Güvenlik & Gizlilik</h3>
+                        <p class="service-description" data-i18n="services.security.description">End-to-end şifreleme ve offline-first yaklaşım</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3 class="service-title" data-i18n="services.design.title">UI/UX Tasarım</h3>
+                        <p class="service-description" data-i18n="services.design.description">Modern, kullanıcı dostu ve erişilebilir arayüzler</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Details Item 2 -->
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/details-2.png" class="img-fluid" alt="" onerror="this.onerror=null;this.src='Bootslander/assets/img/details-2.png';">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3 data-i18n="details.item2.title" data-default="Match your tone with 0–100 style"></h3>
-            <p class="fst-italic" data-i18n="details.item2.lead" data-default="From chatty to academic with a single slider."></p>
-            <ul>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item2.point1" data-default="Keep your brand voice while scaling output."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item2.point2" data-default="Preview multiple tones before deciding."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item2.point3" data-default="Refine quickly with one‑click rewrites."></span></li>
-            </ul>
-          </div>
-        </div>
-        <!-- Details Item 3 -->
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="300">
-            <img src="assets/img/details-3.png" class="img-fluid" alt="" onerror="this.onerror=null;this.src='Bootslander/assets/img/details-3.png';">
-          </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="300">
-            <h3 data-i18n="details.item3.title" data-default="Gemini 2.5 today, multi‑model roadmap"></h3>
-            <p class="fst-italic" data-i18n="details.item3.lead" data-default="We run on Gemini 2.5 now and plan to add other leading models next."></p>
-            <ul>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item3.point1" data-default="Current engine: Gemini 2.5 for high‑quality generation."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item3.point2" data-default="Future: plug‑in other models (OpenAI, Claude, local LLMs) and let you choose."></span></li>
-              <li><i class="bi bi-check"></i><span data-i18n="details.item3.point3" data-default="Template‑level personalized prompts: tailor tone and structure per template."></span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="pricing.title" data-default="Pricing"></h2>
-        <div><span>JadeAI</span> <span class="description-title" data-i18n="pricing.subtitle" data-default="Credit packs"></span></div>
-      </div>
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3 data-i18n="pricing.free.title" data-default="Free"></h3>
-              <p class="description" data-i18n="pricing.free.desc" data-default="Google login → 5 free credits"></p>
-              <h4><sup>$</sup>0<span> / one-time</span></h4>
-              <a href="#hero" class="cta-btn" data-i18n="pricing.free.cta" data-default="Get started"></a>
-              <p class="text-center small" data-i18n="pricing.free.note" data-default="No credit card required"></p>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <p class="popular" data-i18n="pricing.paid.popular" data-default="Popular"></p>
-              <h3 data-i18n="pricing.paid.title" data-default="Premium"></h3>
-              <p class="description" data-i18n="pricing.paid.desc" data-default="50 credits → $5"></p>
-              <h4><sup>$</sup>5<span> / pack</span></h4>
-              <a href="#hero" class="cta-btn" data-i18n="pricing.paid.cta" data-default="Buy credits"></a>
-              <p class="text-center small" data-i18n="pricing.paid.note" data-default="Use credits for any template"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq section light-background">
-      <div class="container-fluid">
-        <div class="row gy-4">
-          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3><span data-i18n="faq.title" data-default="FAQ"></span></h3>
-              <p data-i18n="faq.lead" data-default="Answers about JadeAI credits, languages, and privacy."></p>
-            </div>
-            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-              <div class="faq-item faq-active"><i class="faq-icon bi bi-question-circle"></i><h3 data-i18n="faq.q1" data-default="Do you use your own AI?"></h3><div class="faq-content"><p data-i18n="faq.a1" data-default="JadeAI is powered by Gemini for reliable, high‑quality responses."></p></div><i class="faq-toggle bi bi-chevron-right"></i></div>
-              <div class="faq-item"><i class="faq-icon bi bi-question-circle"></i><h3 data-i18n="faq.q2" data-default="Which languages are supported?"></h3><div class="faq-content"><p data-i18n="faq.a2" data-default="English, Turkish, German, Spanish, Portuguese and French are supported."></p></div><i class="faq-toggle bi bi-chevron-right"></i></div>
-              <div class="faq-item"><i class="faq-icon bi bi-question-circle"></i><h3 data-i18n="faq.q3" data-default="How do credits work?"></h3><div class="faq-content"><p data-i18n="faq.a3" data-default="One credit = one generated content. Free users get 5 credits with Google login; Premium pack offers 50 credits for $5."></p></div><i class="faq-toggle bi bi-chevron-right"></i></div>
-              <div class="faq-item"><i class="faq-icon bi bi-question-circle"></i><h3 data-i18n="faq.q4" data-default="Is my content private?"></h3><div class="faq-content"><p data-i18n="faq.a4" data-default="Your content is private by default. Sharing to the community is optional and fully anonymous."></p></div><i class="faq-toggle bi bi-chevron-right"></i></div>
-            </div>
-          </div>
-          <div class="col-lg-5 order-1 order-lg-2"><img src="assets/img/faq.jpg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100" onerror="this.onerror=null;this.src='Bootslander/assets/img/faq.jpg';"></div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="contact.title" data-default="Contact"></h2>
-        <div><span data-i18n="contact.subtitle1" data-default="Email us"></span> <span class="description-title" data-i18n="contact.subtitle2" data-default="We'd love to hear from you"></span></div>
-      </div>
-      <div class="container" data-aos="fade" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200"><i class="bi bi-envelope flex-shrink-0"></i><div><h3 data-i18n="contact.emailTitle" data-default="Email"></h3><p>hello.jadeai@gmail.com</p></div></div>
-          </div>
-          <div class="col-lg-8">
-            <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6"><input type="text" id="cname" class="form-control" placeholder="Your Name" required></div>
-                <div class="col-md-6 "><input type="email" id="cemail" class="form-control" placeholder="Your Email" required></div>
-                <div class="col-md-12"><input type="text" id="csubject" class="form-control" placeholder="Subject" required></div>
-                <div class="col-md-12"><textarea id="cmessage" class="form-control" rows="6" placeholder="Message" required></textarea></div>
-                <div class="col-md-12 text-center"><button type="submit" data-i18n="contact.send" data-default="Send Message"></button></div>
-              </div>
-            </form>
-          </div>
+    <section id="contact" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="contact.title">İletişime Geçin</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="contact.subtitle">Projeleriniz için bizimle iletişime geçin</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <form class="contact-form" id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label" data-i18n="contact.form.name">Adınız</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" data-i18n="contact.form.email">E-posta</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label" data-i18n="contact.form.subject">Konu</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" data-i18n="contact.form.message">Mesajınız</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6 text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h4 class="mt-3" data-i18n="contact.info.email">E-posta</h4>
+                    <a href="mailto:hello.jadeai@gmail.com" style="color: var(--primary-color); text-decoration: none;">hello.jadeai@gmail.com</a>
+                </div>
+                <div class="col-md-6 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fab fa-instagram"></i></div>
+                    <h4 class="mt-3" data-i18n="contact.info.social">Sosyal Medya</h4>
+                    <a href="https://instagram.com/jadeai.app" target="_blank" style="color: var(--primary-color); text-decoration: none;">@jadeai.app</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container footer-top">
-      <div class="row gy-4 align-items-start">
-        <div class="col-lg-6 col-md-6 footer-about">
-          <a href="#hero" class="logo d-flex align-items-center"><span class="sitename">JadeAI</span></a>
-          <div class="footer-contact pt-2">
-            <p class="muted">AI Writing Assistant for fast, consistent content.</p>
-            <p class="mt-2"><strong>Email:</strong> <span>hello.jadeai@gmail.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-2">
-            <a href="https://instagram.com/jadeai.app" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-          </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3 class="navbar-brand d-inline-block mb-3">JadeAI</h3>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-i18n="footer.description">
+                    Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="jadeai/index.html">JadeAI</a>
+                <a href="sifre-yoneticisi/index.html">Şifre Yöneticisi</a>
+                <a href="garanti-takipcisi/index.html">Garanti Takipçisi</a>
+                <a href="jadeai/privacy-policy.html">Gizlilik Politikası</a>
+                <a href="jadeai/terms-of-service.html">Kullanım Şartları</a>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://instagram.com/jadeai.app" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:hello.jadeai@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="copyright">
+                © 2025 JadeAI. <span data-i18n="footer.copyright">Tüm hakları saklıdır.</span>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Links</h4>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>  
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">JadeAI</strong> <span>All Rights Reserved</span></p>
-  </div>
-  </footer>
+    </footer>
 
-  <!-- Theme Vendor JS (temporarily referenced from Bootslander) -->
-  <script src="Bootslander/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="Bootslander/assets/vendor/php-email-form/validate.js"></script>
-  <script src="Bootslander/assets/vendor/aos/aos.js"></script>
-  <script src="Bootslander/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="Bootslander/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="Bootslander/assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Theme Main JS -->
-  <script src="Bootslander/assets/js/main.js"></script>
-
-  <!-- Our scripts -->
-  <script src="js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                    }
+                }
+            });
+        });
+        
+        // Active nav link on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navbarHeight - 100;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-number[data-count]');
+        const speed = 200;
+        
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateCounter(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        counters.forEach(counter => observer.observe(counter));
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            const body = `Ad: ${data.name}\nEmail: ${data.email}\n\n${data.message}`;
+            window.location.href = `mailto:hello.jadeai@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
+            this.reset();
+        });
+        
+        // Language switcher
+        let currentLang = 'tr';
+        
+        // Embedded translations (to avoid CORS issues with local files)
+        const translations = {
+            tr: {
+                "nav": {
+                    "home": "Ana Sayfa",
+                    "projects": "Projelerimiz",
+                    "about": "Hakkımızda",
+                    "services": "Hizmetlerimiz",
+                    "contact": "İletişim"
+                },
+                "hero": {
+                    "title": "Geleceği Kodluyoruz",
+                    "subtitle": "Modern mobil uygulamalar geliştiren yenilikçi bir teknoloji şirketi",
+                    "cta": "Projelerimizi Keşfet"
+                },
+                "projects": {
+                    "title": "Projelerimiz",
+                    "subtitle": "Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar",
+                    "jadeai": {
+                        "title": "JadeAI Yazı Asistanı",
+                        "description": "AI destekli yazı asistanı. 120+ template ile hızlı, tutarlı içerik üretin."
+                    },
+                    "password": {
+                        "title": "Şifre Yöneticisi",
+                        "description": "AES-256 şifreleme ile şifrelerinizi güvenle saklayın. Tamamen offline."
+                    },
+                    "warranty": {
+                        "title": "Garanti Takipçisi",
+                        "description": "Ürün garantilerinizi takip edin. Hatırlatmalar ve bildirimler."
+                    }
+                },
+                "about": {
+                    "title": "Hakkımızda",
+                    "subtitle": "Teknoloji ve yenilikle geleceği şekillendiriyoruz",
+                    "description": "JadeAI olarak, kullanıcı deneyimini ön planda tutan, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz. Her projemizde, teknolojinin gücünü günlük hayatı kolaylaştırmak için kullanıyoruz.",
+                    "values": {
+                        "innovation": {
+                            "title": "İnovasyon",
+                            "description": "Sürekli gelişim ve yenilikçi çözümler"
+                        },
+                        "security": {
+                            "title": "Güvenlik",
+                            "description": "Kullanıcı verilerinin korunması önceliğimiz"
+                        },
+                        "quality": {
+                            "title": "Kalite",
+                            "description": "Her detayda mükemmellik arayışı"
+                        }
+                    }
+                },
+                "services": {
+                    "title": "Neler Yapıyoruz",
+                    "subtitle": "Kapsamlı mobil uygulama geliştirme hizmetleri",
+                    "mobile": {
+                        "title": "Mobil Uygulama Geliştirme",
+                        "description": "React Native ile iOS ve Android için native performanslı uygulamalar"
+                    },
+                    "ai": {
+                        "title": "AI Entegrasyonu",
+                        "description": "Yapay zeka destekli akıllı özellikler ve otomasyon"
+                    },
+                    "security": {
+                        "title": "Güvenlik & Gizlilik",
+                        "description": "End-to-end şifreleme ve offline-first yaklaşım"
+                    },
+                    "design": {
+                        "title": "UI/UX Tasarım",
+                        "description": "Modern, kullanıcı dostu ve erişilebilir arayüzler"
+                    }
+                },
+                "contact": {
+                    "title": "İletişime Geçin",
+                    "subtitle": "Projeleriniz için bizimle iletişime geçin",
+                    "form": {
+                        "name": "Adınız",
+                        "email": "E-posta",
+                        "subject": "Konu",
+                        "message": "Mesajınız",
+                        "submit": "Gönder"
+                    },
+                    "info": {
+                        "email": "E-posta",
+                        "social": "Sosyal Medya"
+                    }
+                },
+                "footer": {
+                    "description": "Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz.",
+                    "copyright": "Tüm hakları saklıdır."
+                }
+            },
+            en: {
+                "nav": {
+                    "home": "Home",
+                    "projects": "Projects",
+                    "about": "About",
+                    "services": "Services",
+                    "contact": "Contact"
+                },
+                "hero": {
+                    "title": "Coding the Future",
+                    "subtitle": "An innovative technology company developing modern mobile applications",
+                    "cta": "Explore Our Projects"
+                },
+                "projects": {
+                    "title": "Our Projects",
+                    "subtitle": "User-focused, secure and innovative mobile applications",
+                    "jadeai": {
+                        "title": "JadeAI Writing Assistant",
+                        "description": "AI-powered writing assistant. Create fast, consistent content with 120+ templates."
+                    },
+                    "password": {
+                        "title": "Password Manager",
+                        "description": "Store your passwords securely with AES-256 encryption. Completely offline."
+                    },
+                    "warranty": {
+                        "title": "Warranty Tracker",
+                        "description": "Track your product warranties. Reminders and notifications."
+                    }
+                },
+                "about": {
+                    "title": "About Us",
+                    "subtitle": "Shaping the future with technology and innovation",
+                    "description": "At JadeAI, we develop secure and innovative mobile applications that prioritize user experience. In every project, we use the power of technology to make everyday life easier.",
+                    "values": {
+                        "innovation": {
+                            "title": "Innovation",
+                            "description": "Continuous development and innovative solutions"
+                        },
+                        "security": {
+                            "title": "Security",
+                            "description": "Protection of user data is our priority"
+                        },
+                        "quality": {
+                            "title": "Quality",
+                            "description": "Pursuit of excellence in every detail"
+                        }
+                    }
+                },
+                "services": {
+                    "title": "What We Do",
+                    "subtitle": "Comprehensive mobile application development services",
+                    "mobile": {
+                        "title": "Mobile App Development",
+                        "description": "Native performance apps for iOS and Android with React Native"
+                    },
+                    "ai": {
+                        "title": "AI Integration",
+                        "description": "AI-powered smart features and automation"
+                    },
+                    "security": {
+                        "title": "Security & Privacy",
+                        "description": "End-to-end encryption and offline-first approach"
+                    },
+                    "design": {
+                        "title": "UI/UX Design",
+                        "description": "Modern, user-friendly and accessible interfaces"
+                    }
+                },
+                "contact": {
+                    "title": "Get In Touch",
+                    "subtitle": "Contact us for your projects",
+                    "form": {
+                        "name": "Your Name",
+                        "email": "Email",
+                        "subject": "Subject",
+                        "message": "Your Message",
+                        "submit": "Send"
+                    },
+                    "info": {
+                        "email": "Email",
+                        "social": "Social Media"
+                    }
+                },
+                "footer": {
+                    "description": "We develop user-focused, secure and innovative mobile applications.",
+                    "copyright": "All rights reserved."
+                }
+            }
+        };
+        
+        // Apply translations
+        function applyTranslations(lang) {
+            if (!translations[lang]) {
+                console.error('Translations not loaded for:', lang);
+                return;
+            }
+            
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const keys = key.split('.');
+                let value = translations[lang];
+                
+                for (const k of keys) {
+                    if (value && value[k]) {
+                        value = value[k];
+                    } else {
+                        value = null;
+                        break;
+                    }
+                }
+                
+                if (value) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = value;
+                    } else {
+                        element.textContent = value;
+                    }
+                }
+            });
+            
+            document.documentElement.lang = lang;
+        }
+        
+        // Language button click handlers
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                if (lang !== currentLang) {
+                    currentLang = lang;
+                    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    applyTranslations(lang);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

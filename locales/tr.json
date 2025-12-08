@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "projects": "Projelerimiz",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Geleceği Kodluyoruz",
+    "subtitle": "Modern mobil uygulamalar geliştiren yenilikçi bir teknoloji şirketi",
+    "cta": "Projelerimizi Keşfet"
+  },
+  "projects": {
+    "title": "Projelerimiz",
+    "subtitle": "Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar",
+    "jadeai": {
+      "title": "JadeAI Yazı Asistanı",
+      "description": "AI destekli yazı asistanı. 120+ template ile hızlı, tutarlı içerik üretin."
+    },
+    "password": {
+      "title": "Şifre Yöneticisi",
+      "description": "AES-256 şifreleme ile şifrelerinizi güvenle saklayın. Tamamen offline."
+    },
+    "warranty": {
+      "title": "Garanti Takipçisi",
+      "description": "Ürün garantilerinizi takip edin. Hatırlatmalar ve bildirimler."
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Teknoloji ve yenilikle geleceği şekillendiriyoruz",
+    "description": "JadeAI olarak, kullanıcı deneyimini ön planda tutan, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz. Her projemizde, teknolojinin gücünü günlük hayatı kolaylaştırmak için kullanıyoruz.",
+    "values": {
+      "innovation": {
+        "title": "İnovasyon",
+        "description": "Sürekli gelişim ve yenilikçi çözümler"
+      },
+      "security": {
+        "title": "Güvenlik",
+        "description": "Kullanıcı verilerinin korunması önceliğimiz"
+      },
+      "quality": {
+        "title": "Kalite",
+        "description": "Her detayda mükemmellik arayışı"
+      }
+    }
+  },
+  "services": {
+    "title": "Neler Yapıyoruz",
+    "subtitle": "Kapsamlı mobil uygulama geliştirme hizmetleri",
+    "mobile": {
+      "title": "Mobil Uygulama Geliştirme",
+      "description": "React Native ile iOS ve Android için native performanslı uygulamalar"
+    },
+    "ai": {
+      "title": "AI Entegrasyonu",
+      "description": "Yapay zeka destekli akıllı özellikler ve otomasyon"
+    },
+    "security": {
+      "title": "Güvenlik & Gizlilik",
+      "description": "End-to-end şifreleme ve offline-first yaklaşım"
+    },
+    "design": {
+      "title": "UI/UX Tasarım",
+      "description": "Modern, kullanıcı dostu ve erişilebilir arayüzler"
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Projeleriniz için bizimle iletişime geçin",
+    "form": {
+      "name": "Adınız",
+      "email": "E-posta",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "submit": "Gönder"
+    },
+    "info": {
+      "email": "E-posta",
+      "social": "Sosyal Medya"
+    }
+  },
+  "footer": {
+    "description": "Kullanıcı odaklı, güvenli ve yenilikçi mobil uygulamalar geliştiriyoruz.",
+    "links": {
+      "apps": "Uygulamalar",
+      "company": "Şirket",
+      "legal": "Yasal"
+    },
+    "copyright": "Tüm hakları saklıdır."
+  }
+}
+
