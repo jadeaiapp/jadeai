@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadTranslations(locale) {
-  return fetch(`../locales/${locale}.json`, { cache: 'no-cache' })
+  return fetch(`locales/${locale}.json`, { cache: 'no-cache' })
     .then(function(res) { return res.json(); })
     .catch(function() { return {}; });
 }
